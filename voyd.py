@@ -1200,4 +1200,4 @@ async def unban(ctx, *args):
 async def voicekick(member=None):
     if member"""
 
-bot.run("NDc4OTQ1ODEwMzc4MjYwNDkw.DlUlaQ.Jll96dWr7d9K72I31FPLQHuQqLw")
+bot.run("TOKEN")
