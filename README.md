@@ -1,3 +1,3 @@
-# V O Y D
+# V O Y D (Discord bot)
 
 yay
