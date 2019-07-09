@@ -1,13 +1,15 @@
-"""
-X A R K E N Z                2 0 1 8
 
-█   █  ███  █   █ ████
-█   █ █   █  █ █  █   █
- █ █  █   █   █   █   █
-  █    ███    █   ████
-
-Definitely not an Incredibles character...
-"""
+"""'''''''''''''''''''''''''
+|X A R K E N Z      2 0 1 9|
+|                          |
+||   |  /```\  \   /  |```\|
+||   |  |   |   \ /   |   ||
+| \ /   |   |    Y    |   ||
+|  V    \___/    |    |___/|
+|   r  e  w  r  i  t  e    |
+|                          |
+|Consider your guild saved!|
+'''''''''''''''''''''''''"""
 
 #611833175784-gfh8s12pjjm880ms799lj2b1lad5vjnv.apps.googleusercontent.com
 
@@ -303,12 +305,13 @@ async def on_server_remove(server):
 async def on_message(message):
     if type(stringIn("<@461646073769885697>", message.content)) == int:
         await bot.send_message(message.channel, "<:ping:459476736334364672>")
-    if message.server != None and not message.author.bot:
+    if message.server is not None and not message.author.bot:
         if message.server.id in serverset.keys():
             bot.command_prefix = serverset[message.server.id][0]
             await bot.process_commands(message)
             bot.command_prefix = cmd_prefix
         else:
+            print(message.content)
             await bot.process_commands(message)
 
 @bot.event
@@ -405,6 +408,7 @@ async def invite(ctx):
 
 @bot.command(pass_context=True, aliases=["purge", "purgemessages", "purge-messages"])
 async def p(ctx, messages, user=None):
+    print("hi")
     if messages.isdigit():
         messages = int(messages)
         if messages <= 500 and messages > 0:
@@ -1200,4 +1204,4 @@ async def unban(ctx, *args):
 async def voicekick(member=None):
     if member"""
 
-bot.run("TOKEN")
+bot.run("BOT_TOKEN")
